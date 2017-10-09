@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFLoginWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="765.256" Width="770.3" Background="LightGray">
     <Grid>
-        
+        <Border Name="_login" BorderBrush="Black" BorderThickness="2" Height="400" Width="255" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.6*" />
+                <RowDefinition Height=".15*"/>
+                <RowDefinition Height=".15*"/>
+                <RowDefinition Height=".2*"/>
+            </Grid.RowDefinitions>
+                <Image Margin="0, 0, 0, 0" Source="Resources/font-awesome_4-7-0_user-circle-o_256_91_25abed_none.png" Grid.ColumnSpan="2"/>
+                <TextBox Name="_username" Grid.Row="1" Margin="15,10,15,10" BorderThickness="1" BorderBrush="Black" Grid.ColumnSpan="2" FontFamily="pack://application:,,,/fonts/#Roboto" FontSize="20" VerticalContentAlignment="Center">Username</TextBox>
+                <PasswordBox Name="_password" Grid.Row="2" Margin="15,10,15,10" BorderThickness="1" BorderBrush="Black" Grid.ColumnSpan="2" FontSize="20" VerticalContentAlignment="Center"></PasswordBox>
+                <Button Grid.Row="3" Margin="40,10,40,10" Grid.ColumnSpan="2" FontFamily="pack://application:,,,/fonts/#Roboto" FontSize="20">OK</Button>
+        </Grid>
+        </Border>
     </Grid>
 </Window>
