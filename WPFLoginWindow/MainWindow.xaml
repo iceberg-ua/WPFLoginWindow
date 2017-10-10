@@ -7,19 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="765.256" Width="770.3" Background="LightGray">
     <Grid>
-        <Border Name="_login" BorderBrush="Black" BorderThickness="2" Height="400" Width="255" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Border Name="_login" BorderBrush="Black" BorderThickness="2" Height="389" Width="275" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="276,167,211,178">
             <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="White">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.6*" />
-                <RowDefinition Height=".15*"/>
-                <RowDefinition Height=".15*"/>
-                <RowDefinition Height=".2*"/>
-            </Grid.RowDefinitions>
-                <Image Margin="0, 0, 0, 0" Source="Resources/font-awesome_4-7-0_user-circle-o_256_91_25abed_none.png" Grid.ColumnSpan="2"/>
-                <TextBox Name="_username" Grid.Row="1" Margin="15,10,15,10" BorderThickness="1" BorderBrush="Black" Grid.ColumnSpan="2" FontFamily="pack://application:,,,/fonts/#Roboto" FontSize="20" VerticalContentAlignment="Center">Username</TextBox>
-                <PasswordBox Name="_password" Grid.Row="2" Margin="15,10,15,10" BorderThickness="1" BorderBrush="Black" Grid.ColumnSpan="2" FontSize="20" VerticalContentAlignment="Center"></PasswordBox>
-                <Button Grid.Row="3" Margin="40,10,40,10" Grid.ColumnSpan="2" FontFamily="pack://application:,,,/fonts/#Roboto" FontSize="20">OK</Button>
-        </Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.6*" />
+                    <RowDefinition Height=".15*"/>
+                    <RowDefinition Height=".15*"/>
+                    <RowDefinition Height=".2*"/>
+                </Grid.RowDefinitions>
+                <Image Margin="0" Source="Resources/font-awesome_4-7-0_user-circle-o_256_91_25abed_none.png" Grid.ColumnSpan="2"/>
+                <local:LabeledTextBox Grid.Row="1" Margin="15,0,15,0" x:Name="_usernameTB"/>
+                <local:LabeledTextBox Grid.Row="2" Margin="15,0,15,0" x:Name="_passwordTB"/>
+                <Button Grid.Row="3" Margin="50,10,50,10" Grid.ColumnSpan="2" FontFamily="pack://application:,,,/fonts/#Roboto" FontSize="18">OK</Button>
+            </Grid>
         </Border>
     </Grid>
 </Window>

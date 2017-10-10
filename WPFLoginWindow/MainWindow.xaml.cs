@@ -23,6 +23,9 @@ namespace WPFLoginWindow
         public MainWindow()
         {
             InitializeComponent();
+            _usernameTB.LabelText = "Username";
+            _passwordTB.LabelText = "Password";
+            _passwordTB.IsPassword = true;
         }
     }
 }

@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="WPFLoginWindow.LabeledTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFLoginWindow"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="250" FontFamily="pack://application:,,,/fonts/#Roboto">
+    <StackPanel>
+        <Label Name="_label"/>
+        <TextBox Name="_username" BorderBrush="Black" FontSize="20" VerticalContentAlignment="Center"></TextBox>
+        <PasswordBox Name="_password" BorderBrush="Black" FontSize="20" VerticalContentAlignment="Center" Visibility="Collapsed"></PasswordBox>
+    </StackPanel>
+</UserControl>
