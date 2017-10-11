@@ -8,7 +8,7 @@
              d:DesignHeight="40" d:DesignWidth="250" FontFamily="pack://application:,,,/fonts/#Roboto">
     <StackPanel>
         <Label Name="_label"/>
-        <TextBox Name="_username" BorderBrush="Black" FontSize="20" VerticalContentAlignment="Center"></TextBox>
-        <PasswordBox Name="_password" BorderBrush="Black" FontSize="20" VerticalContentAlignment="Center" Visibility="Collapsed"></PasswordBox>
+        <TextBox Name="_username" BorderBrush="Gray" BorderThickness="1" FontSize="13" Padding="3" VerticalContentAlignment="Center"></TextBox>
+        <PasswordBox Name="_password" BorderBrush="Gray" BorderThickness="1" FontSize="13" Padding="3" VerticalContentAlignment="Center" Visibility="Collapsed"></PasswordBox>
     </StackPanel>
 </UserControl>

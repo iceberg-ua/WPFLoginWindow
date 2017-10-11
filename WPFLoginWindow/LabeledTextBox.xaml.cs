@@ -31,12 +31,10 @@ namespace WPFLoginWindow
 
         private void PasswordPasswordChanged(object sender, RoutedEventArgs e)
         {
-            TextChanged.Invoke(sender, new TextChangedEventArgs(e.RoutedEvent, UndoAction.None));
         }
 
         private void UsernameTextChanged(object sender, TextChangedEventArgs e)
         {
-            TextChanged.Invoke(sender, e);
         }
 
         public static readonly DependencyProperty LabelTextProperty = DependencyProperty.Register(
