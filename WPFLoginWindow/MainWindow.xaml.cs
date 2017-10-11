@@ -27,5 +27,13 @@ namespace WPFLoginWindow
             _passwordTB.LabelText = "Password";
             _passwordTB.IsPassword = true;
         }
+
+        private void LoginButtonClick(object sender, RoutedEventArgs e)
+        {
+            string user = _usernameTB.Text;
+            string pass = _passwordTB.Text;
+
+            MessageBox.Show($"{user}:{pass}", "Login");
+        }
     }
 }

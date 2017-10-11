@@ -54,5 +54,16 @@ namespace WPFLoginWindow
                 }
             }
         }
+
+        public string Text
+        {
+            get {
+                if (!IsPassword)
+                    return _username.Text;
+                else
+                    return _password.Password;
+            }
+            set { }
+        }
     }
 }

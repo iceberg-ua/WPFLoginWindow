@@ -18,7 +18,7 @@
                 <Image Margin="0" Source="Resources/font-awesome_4-7-0_user-circle-o_256_91_25abed_none.png" Grid.ColumnSpan="2"/>
                 <local:LabeledTextBox Grid.Row="1" Margin="15,0,15,0" x:Name="_usernameTB"/>
                 <local:LabeledTextBox Grid.Row="2" Margin="15,0,15,0" x:Name="_passwordTB"/>
-                <Button Grid.Row="3" Margin="50,10,50,10" Grid.ColumnSpan="2" FontFamily="pack://application:,,,/fonts/#Roboto" FontSize="18">OK</Button>
+                <Button Grid.Row="3" Margin="60,15,60,15" Grid.ColumnSpan="2" FontFamily="pack://application:,,,/fonts/#Roboto" FontSize="18" Click="LoginButtonClick">Login</Button>
             </Grid>
         </Border>
     </Grid>
