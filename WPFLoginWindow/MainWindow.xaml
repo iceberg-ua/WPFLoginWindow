@@ -56,10 +56,10 @@
                     </Image.Triggers>-->
                 </Image>
                 <!--<local:CircleSpinner Padding="58,52,58,48" Margin="0,-20,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderThickness="0"/>-->
-                <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" Margin="0,0,0,10" FontFamily="pack://application:,,,/fonts/#Roboto" Foreground="#FF0984C1">Login to PLANTA Project</TextBlock>
+                <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" Margin="0,0,0,10" FontFamily="pack://application:,,,/fonts/#Roboto" Foreground="#FF0984C1">Login to SOMEWHERE</TextBlock>
                 <local:LabeledTextBox Grid.Row="1" Margin="15,0,15,0" x:Name="_usernameTB"/>
                 <local:LabeledTextBox Grid.Row="2" Margin="15,0,15,0" x:Name="_passwordTB"/>
-                <Button Grid.Row="3" IsDefault="True" Height="Auto" Width="Auto" Background="#FF0984C1" Foreground="White" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="pack://application:,,,/fonts/#Roboto" FontSize="16" Click="LoginButtonClick" Content="Login">
+                <Button Grid.Row="3" IsDefault="True" IsTabStop="False" Height="Auto" Width="Auto" Background="#FF0984C1" Foreground="White" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="pack://application:,,,/fonts/#Roboto" FontSize="16" Click="LoginButtonClick" Content="Login">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Template">
@@ -90,6 +90,7 @@
                         </EventTrigger>
                     </Button.Triggers>
                 </Button>
+                <Button Click="CancelButtonClick" IsTabStop="False" IsCancel="True" Width="0" Height="0"/>
             </Grid>
         </Border>
     </Grid>

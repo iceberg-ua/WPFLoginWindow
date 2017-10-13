@@ -46,5 +46,10 @@ namespace WPFLoginWindow
             MessageBox.Show($"{user}:{pass}", "Login");
             //_rt.BeginAnimation(RotateTransform.AngleProperty, animation);
         }
+
+        private void CancelButtonClick(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
