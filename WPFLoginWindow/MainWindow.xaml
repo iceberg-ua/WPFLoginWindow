@@ -6,31 +6,11 @@
         xmlns:local="clr-namespace:WPFLoginWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="765" Width="770" Background="Black">
-    <Window.Resources>
-        <!--<Style x:Key="OwnStyle" TargetType="Button">
-            <Setter Property="OverridesDefaultStyle" Value="True" />
-            <Setter Property="Cursor" Value="Hand" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Opacity" Value="0.8" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>-->
-    </Window.Resources>
     <Grid>
         <Border Name="_login" BorderBrush="White" BorderThickness="0" Height="380" Width="Auto" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,166,52,188">
             <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="White">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="0.6*" />
+                    <RowDefinition Height="0.7*" />
                     <RowDefinition Height=".15*"/>
                     <RowDefinition Height=".15*"/>
                     <RowDefinition Height=".15*"/>
@@ -66,7 +46,7 @@
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type Button}">
                                         <Border Background="{TemplateBinding Background}"  Padding="35,5,35,5">
-                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                                         </Border>
                                     </ControlTemplate>
                                 </Setter.Value>
