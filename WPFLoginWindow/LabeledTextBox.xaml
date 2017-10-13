@@ -6,9 +6,22 @@
              xmlns:local="clr-namespace:WPFLoginWindow"
              mc:Ignorable="d" 
              d:DesignHeight="40" d:DesignWidth="250" FontFamily="pack://application:,,,/fonts/#Roboto">
+    <UserControl.Resources>
+        <Style x:Key="TextBoxBorder" TargetType="Border">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+        </Style>
+        <Style x:Key="Triggers" TargetType="TextBox">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property = "BorderBrush" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>    
     <StackPanel>
         <Label Name="_label"/>
-        <TextBox Name="_username" BorderBrush="Gray" BorderThickness="1" FontSize="13" Padding="3" VerticalContentAlignment="Center"></TextBox>
-        <PasswordBox Name="_password" BorderBrush="Gray" BorderThickness="1" FontSize="13" Padding="3" VerticalContentAlignment="Center" Visibility="Collapsed"></PasswordBox>
+            <TextBox Name="_username" BorderThickness="1" Padding="3" FontSize="13" VerticalContentAlignment="Center"/>
+            <PasswordBox Name="_password" BorderThickness="1" Padding="3" FontSize="13" VerticalContentAlignment="Center" Visibility="Collapsed"/>
     </StackPanel>
 </UserControl>

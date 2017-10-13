@@ -6,8 +6,28 @@
         xmlns:local="clr-namespace:WPFLoginWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="765" Width="770" Background="Black">
+    <Window.Resources>
+        <!--<Style x:Key="OwnStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>-->
+    </Window.Resources>
     <Grid>
-        <Border Name="_login" BorderBrush="White" BorderThickness="0" Height="380" Width="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,166,52,188">
+        <Border Name="_login" BorderBrush="White" BorderThickness="0" Height="380" Width="Auto" MinWidth="240" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,166,52,188">
             <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="White">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.6*" />
@@ -15,8 +35,8 @@
                     <RowDefinition Height=".15*"/>
                     <RowDefinition Height=".15*"/>
                 </Grid.RowDefinitions>
-                <Image Grid.Row="0" RenderTransformOrigin=".5,.5" Margin="0,-20,0,0" Source="Resources/font-awesome_4-7-0_user-circle-o_256_91_25abed_none.png" Grid.ColumnSpan="2">
-                    <Image.RenderTransform>
+                <Image Grid.Row="0" Name="_image" RenderTransformOrigin=".5,.5" Margin="0,-20,0,0" Source="Resources/font-awesome_4-7-0_user-circle-o_256_91_25abed_none.png" Grid.ColumnSpan="2">
+                    <!--<Image.RenderTransform>
                         <RotateTransform x:Name="AnimatedRotateTransform" Angle="0"/>
                     </Image.RenderTransform>
                     <Image.Triggers>
@@ -33,13 +53,43 @@
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
-                    </Image.Triggers>
+                    </Image.Triggers>-->
                 </Image>
                 <!--<local:CircleSpinner Padding="58,52,58,48" Margin="0,-20,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderThickness="0"/>-->
                 <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" Margin="0,0,0,10" FontFamily="pack://application:,,,/fonts/#Roboto" Foreground="#FF0984C1">Login to PLANTA Project</TextBlock>
                 <local:LabeledTextBox Grid.Row="1" Margin="15,0,15,0" x:Name="_usernameTB"/>
                 <local:LabeledTextBox Grid.Row="2" Margin="15,0,15,0" x:Name="_passwordTB"/>
-                <Button Grid.Row="3" Height="Auto" Width="Auto" Padding="35,5,35,5" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" FontFamily="pack://application:,,,/fonts/#Roboto" FontSize="16" Click="LoginButtonClick">Login</Button>
+                <Button Grid.Row="3" IsDefault="True" Height="Auto" Width="Auto" Background="#FF0984C1" Foreground="White" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="pack://application:,,,/fonts/#Roboto" FontSize="16" Click="LoginButtonClick" Content="Login">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}"  Padding="35,5,35,5">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="#FF3C9AC9" Duration="0:0:.1" Storyboard.TargetProperty="Background.Color"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="#FF0984C1" Duration="0:0:.1" Storyboard.TargetProperty="Background.Color"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
             </Grid>
         </Border>
     </Grid>
