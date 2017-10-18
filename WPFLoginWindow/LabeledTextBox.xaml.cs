@@ -25,16 +25,27 @@ namespace WPFLoginWindow
         public LabeledTextBox()
         {
             InitializeComponent();
+
+            IsVisibleChanged += LabeledTextboxIsVisibleChanged;
+
             _username.TextChanged += UsernameTextChanged;
             _password.PasswordChanged += PasswordPasswordChanged;
         }
 
+        private void LabeledTextboxIsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (!IsPassword)
+                _username.Focus();
+        }
+
         private void PasswordPasswordChanged(object sender, RoutedEventArgs e)
         {
+            TextChanged?.Invoke(sender, new TextChangedEventArgs(e.RoutedEvent, UndoAction.None));
         }
 
         private void UsernameTextChanged(object sender, TextChangedEventArgs e)
         {
+            TextChanged?.Invoke(sender, e);
         }
 
         public static readonly DependencyProperty LabelTextProperty = DependencyProperty.Register(
